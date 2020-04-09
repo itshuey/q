@@ -1,18 +1,16 @@
-// routes/api/books.js
-
 const express = require('express');
 const router = express.Router();
 
-// Load Book model
+// Load QItem model
 const QItem = require('../../models/QItem');
 
 // @route GET api/qitems/test
-// @description tests books route
+// @description tests qitems route
 // @access Public
 router.get('/test', (req, res) => res.send('qitem route testing!'));
 
-// @route GET api/books
-// @description Get all books
+// @route GET api/qitems
+// @description Get all qitems
 // @access Public
 router.get('/', (req, res) => {
   QItem.find()
@@ -21,7 +19,7 @@ router.get('/', (req, res) => {
 });
 
 // @route GET api/qitems/:id
-// @description Get single book by id
+// @description Get single qitem by id
 // @access Public
 router.get('/:id', (req, res) => {
   QItem.findById(req.params.id)
@@ -30,7 +28,7 @@ router.get('/:id', (req, res) => {
 });
 
 // @route GET api/qitems
-// @description add/save book
+// @description add/save qitem
 // @access Public
 router.post('/', (req, res) => {
   QItem.create(req.body)
@@ -39,7 +37,7 @@ router.post('/', (req, res) => {
 });
 
 // @route GET api/qitems/:id
-// @description Update book
+// @description Update qitem
 // @access Public
 router.put('/:id', (req, res) => {
   QItem.findByIdAndUpdate(req.params.id, req.body)
@@ -50,7 +48,7 @@ router.put('/:id', (req, res) => {
 });
 
 // @route GET api/qitems/:id
-// @description Delete book by id
+// @description Delete qitem by id
 // @access Public
 router.delete('/:id', (req, res) => {
   QItem.findByIdAndRemove(req.params.id, req.body)

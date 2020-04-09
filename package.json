@@ -1,12 +1,12 @@
 {
   "name": "q",
-  "version": "1.0.0",
-  "description": "The Queue backend",
+  "version": "1.0.1",
+  "description": "The Queue",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "app": "nodemon app.js",
-    "heroku postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Huey Sun",
