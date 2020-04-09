@@ -1,0 +1,45 @@
+.Queues {
+  display: inline-block;
+}
+
+.Queue {
+  margin-bottom: 40px;
+  width: 320px;
+  text-align: center;
+}
+
+.Queue-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.Queue-item {
+  /* color: teal; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Queue-item.finished {
+  color: green;
+}
+
+.Queue-item.in-progress {
+  color: #cfcb00;
+}
+
+.Queue-item-tail {
+  display: flex;
+  flex-direction: row;
+}
+
+.Queue-item-delete {
+  color: red;
+  margin-left: 10px;
+}
+
+.Queue-item-empty-delete {
+  color: #f0f0ea;
+  margin-left: 10px;
+}

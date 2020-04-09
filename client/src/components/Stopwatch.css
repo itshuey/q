@@ -1,0 +1,14 @@
+.Stopwatch-display {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.Stopwatch-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.Stopwatch {
+  margin-bottom: 10px;
+}
