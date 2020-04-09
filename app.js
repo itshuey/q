@@ -9,13 +9,13 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json({ extended: false }));
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.join(__dirname, '/../client/build')));
 app.use('/api/qitems', qitems);
 
 // Serve front-end
 // app.get('/', (req, res) => res.send('Hello world!'));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/../client/build/index.html'));
 });
 
 const port = process.env.PORT || 8082;
