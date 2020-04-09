@@ -12,9 +12,9 @@ app.use(express.json({ extended: false }));
 app.get('/', (req, res) => res.send('Hello world!'));
 app.use('/api/qitems', qitems);
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '/client/build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '../client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 const port = process.env.PORT || 8082;
