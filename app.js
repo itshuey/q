@@ -9,7 +9,7 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json({ extended: false }));
-app.use(express.static(__dirname + '/client/build')));
+app.use(express.static(__dirname + '/client/build'));
 // app.use(express.static('/client/build'));
 app.use('/api/qitems', qitems);
 
