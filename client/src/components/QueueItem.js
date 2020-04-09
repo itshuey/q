@@ -12,7 +12,7 @@ class QueueItem extends Component {
 
   onDeleteClick() {
     axios
-      .delete('http://localhost:8082/api/qitems/'+ this.props.item._id)
+      .delete('/api/qitems/'+ this.props.item._id)
       .then(res => {
         // this.props.history.push("/");
         this.props.updateInfo();
