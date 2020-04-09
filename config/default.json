@@ -1,0 +1,4 @@
+{
+  "mongoURI":
+    "mongodb+srv://admin:admin@mern-tutorial-cluster-nscga.mongodb.net/test?retryWrites=true&w=majority"
+}
