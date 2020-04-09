@@ -9,18 +9,19 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json({ extended: false }));
-app.get('/', (req, res) => res.send('Hello world!'));
+app.use(express.static(path.join(__dirname, '/client/build')));
 app.use('/api/qitems', qitems);
 
-app.use(express.static(path.join(__dirname, '/client/build')));
-app.get('*', (req, res) => {
+// Serve front-end
+// app.get('/', (req, res) => res.send('Hello world!'));
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 const port = process.env.PORT || 8082;
 // app.listen(port, () => console.log(`Server running on port ${port}`));
 
-// Socket
+// Attach socket to server
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 server.listen(port, () => console.log(`Server running on port ${port}`));
