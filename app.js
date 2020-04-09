@@ -12,12 +12,12 @@ app.get('/', (req, res) => res.send('Hello world!'));
 app.use('/api/qitems', qitems);
 
 const port = process.env.PORT || 8082;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Socket
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-server.listen(80);
+server.listen(port, () => console.log(`Server running on port ${port}`));
 
 io.on('connection', function (socket) {
   socket.emit('connect', { hello: 'world' });
