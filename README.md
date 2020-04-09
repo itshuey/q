@@ -1,2 +1,2 @@
 # THE-Q
-Lightweight queueing app built with a MERN (mongo-express-react-node) stack.
+Lightweight queueing [web app](https://huey-q.herokuapp.com/) built with a MERN (mongo-express-react-node) stack.
