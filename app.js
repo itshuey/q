@@ -11,12 +11,12 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 // Include routes & front-end
-app.use(express.static(__dirname + '/client/build'));
+app.use(express.static(__dirname + '/client/public'));
 app.use('/api/qitems', qitems);
 
 // Serve front-end code
 app.get('/', (req, res) => {
-  res.sendFile('client/build/index.html', { root: __dirname });
+  res.sendFile('client/public/index.html', { root: __dirname });
 });
 
 // Attach socket to server (port share)

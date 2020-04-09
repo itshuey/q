@@ -9,7 +9,10 @@
 /coverage
 
 # production
-# /build
+/build
+
+# proxy package (remove if needed)
+package.json
 
 # misc
 .DS_Store
