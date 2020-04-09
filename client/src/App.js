@@ -29,7 +29,7 @@ class App extends React.Component {
       timeZone: 0,
       name: cookies.get('name') || '',
       userID: cookies.get('user_id') || '',
-      socket: socketIOClient('http://localhost:8082'),
+      socket: socketIOClient('https://huey-q.herokuapp.com/'),
     };
 
     this.handleChange = this.handleChange.bind(this);
